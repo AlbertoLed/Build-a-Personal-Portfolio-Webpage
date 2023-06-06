@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/*
+    \\RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+    \\VARIABLES & GEBERAK STYLES
+*/
+:root {
+    --BLACK: #181414;
+    --TAN: #F2D0A7;
+    --PEARL: #f0f0dc;
+
+    font-family: 'Inter', sans-serif;
+}
+html {
+    font-size: 16px;
+}
+
+/*
+    \\ELEMENTS
+*/
+/* \HEADER */
+.nav {
+    background-color: var(--BLACK);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+}
+.nav__link {
+        font-size: 1.4em;
+        text-decoration: none;
+        margin-right: 20px;
+        color: var(--PEARL);
+}
+.welcome-section {
+    background-color: var(--TAN);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-section__title {
+    color: var(--BLACK);
+}
+
+/* \PROJECTS */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--BLACK);
+    color: var(--PEARL);
+}
+.project-tile {
+    width: 95%;
+    margin: 20px 0;
+}
+.project-tile {
+    cursor: pointer;
+}
+.project-tile__img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* \CONTACT */
+.contact {
+    height: calc(100vh - 67px);
+}
