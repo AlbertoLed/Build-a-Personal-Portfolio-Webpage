@@ -17,6 +17,7 @@
     --PEARL: #f0f0dc;
     --RED: #F23D4C;
     --ORANGE: #F25E3D;
+    --YELLOW: #F2C12E;
 
     --FONT-TITLE-BIG: 3.5em;
     --FONT-TITLE-SMALL: 2.8em;
@@ -125,6 +126,33 @@ html {
     justify-content: center;
     color: var(--PEARL);
 }
+.contact__medias {
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.contact__media {
+    color: var(--TAN);
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 10px 20px;
+    transition: transform .5s,
+                color .5s;
+}
+.contact__media:hover {
+    transform: translateY(7px)
+}
+.contact__media--github:hover {
+    color: var(--RED);
+}
+.contact__media--fm:hover {
+    color: var(--ORANGE);
+}
+.contact__media--email:hover {
+    color: var(--YELLOW);
+}
 .contact__title {
     margin-bottom: 10px;
 }
@@ -132,10 +160,21 @@ html {
     font-size: var(--FONT-SUBTITLE);
     margin-bottom: 40px;
 }
-.contact__media {
-    color: var(--TAN);
+.contact__media--fm {
+    position: relative;
+    display: flex;
 }
 .fm-media {
     fill: var(--TAN);
-    /* stroke: var(--TAN); */
+    height: 100%;
+    transition: fill .5s;
+    position: absolute;
+    padding: 0 100% 0 0;
+}
+.fm-media:hover {
+    fill: var(--ORANGE) !important;
+
+}
+.fm-media-span {
+    width: 37px;
 }
