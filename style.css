@@ -12,9 +12,16 @@
     \\VARIABLES & GEBERAK STYLES
 */
 :root {
-    --BLACK: #181414;
+    --BLACK: #0f0c0e;
     --TAN: #F2D0A7;
     --PEARL: #f0f0dc;
+    --RED: #F23D4C;
+    --ORANGE: #F25E3D;
+
+    --FONT-TITLE-BIG: 3.5em;
+    --FONT-TITLE-SMALL: 2.8em;
+    --FONT-SUBTITLE: 1.5em;
+    --FONT-NAV: 1.4em;
 
     font-family: 'Inter', sans-serif;
 }
@@ -33,23 +40,53 @@ html {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 20px 10px;
+
 }
 .nav__link {
-        font-size: 1.4em;
+        font-size: var(--FONT-NAV);
         text-decoration: none;
-        margin-right: 20px;
         color: var(--PEARL);
+        padding: 8px;
+}
+.link {
+    padding: 12px;
+    transition: color .3s .1s,
+                border-color .3s;
+    border: 1px solid var(--PEARL);
+    border-radius: 4px;
+}
+.link--work:hover {
+    color: var(--RED);
+    border-color: var(--RED);
+}
+.link--contact:hover {
+    color: var(--ORANGE);
+    border-color: var(--ORANGE);
+   
 }
 .welcome-section {
     background-color: var(--TAN);
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 .welcome-section__title {
     color: var(--BLACK);
+
+}
+.title {
+    font-size: var(--FONT-TITLE-BIG);
+    text-align: center;
+    text-transform:uppercase;
+}
+.welcome-section__subtitle {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--FONT-SUBTITLE);
 }
 
 /* \PROJECTS */
@@ -60,9 +97,15 @@ html {
     background-color: var(--BLACK);
     color: var(--PEARL);
 }
+.projects__title {
+    font-size: var(--FONT-TITLE-SMALL);
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 .project-tile {
     width: 95%;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 .project-tile {
     cursor: pointer;
@@ -75,4 +118,24 @@ html {
 /* \CONTACT */
 .contact {
     height: calc(100vh - 67px);
+    background-color: var(--BLACK);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--PEARL);
+}
+.contact__title {
+    margin-bottom: 10px;
+}
+.contact__subtitle {
+    font-size: var(--FONT-SUBTITLE);
+    margin-bottom: 40px;
+}
+.contact__media {
+    color: var(--TAN);
+}
+.fm-media {
+    fill: var(--TAN);
+    /* stroke: var(--TAN); */
 }
