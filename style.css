@@ -23,6 +23,7 @@
     --FONT-TITLE-SMALL: 2.8em;
     --FONT-SUBTITLE: 1.5em;
     --FONT-NAV: 1.4em;
+    --FONT-TILE-TITLE: 1.3em;
 
     font-family: 'Inter', sans-serif;
 }
@@ -110,11 +111,50 @@ html {
 }
 .project-tile {
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-decoration: none;
+    color: var(--PEARL);
+    /* transition: color .3s; */
 }
 .project-tile__img {
     width: 100%;
     margin: 0 auto;
+    grid-area: 1 / 1 / 1 / 1;
 }
+.project-tile__foreground {
+    /* background-color: #00000040; */
+    background: linear-gradient(
+        #00000000,
+        #00000000 50%,
+        #00000099 100%
+    ) ;
+    background-size: auto 200%;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / 1 / 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all .5s;
+
+}
+.project-tile__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: var(--FONT-TILE-TITLE);
+    letter-spacing: .1em;
+}
+.project-tile:hover {
+    color: transparent;
+}
+.project-tile__foreground:hover {
+    background-position: top;
+}
+
 
 /* \CONTACT */
 .contact {
